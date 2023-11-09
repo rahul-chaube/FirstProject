@@ -15,11 +15,11 @@ func main() {
 		user.Get("/", list)
 		user.Post("/", create)
 	}
-	app.Listen(":9000")
+	app.Listen(":9001")
 }
 
 func list(ctx iris.Context) {
-	ctx.Write([]byte("Hellow world " + fmt.Sprint(generateNumber())))
+	ctx.Write([]byte("Hello world " + fmt.Sprint(generateNumber())))
 
 }
 func create(ctx iris.Context) {

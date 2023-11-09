@@ -2,13 +2,14 @@ FROM golang:1.21
 
 WORKDIR /app
 
-COPY ../../FirstRest/go.mod .
+COPY FirstRest/go.mod .
 
 RUN go mod download
 
-COPY ../../FirstRest/main.go .
+COPY FirstRest/main.go .
 
 EXPOSE 9002
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-FirstRest
+
 CMD [ "/docker-FirstRest" ]

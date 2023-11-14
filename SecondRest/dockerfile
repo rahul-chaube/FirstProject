@@ -2,12 +2,12 @@ FROM golang:1.21
 
 WORKDIR /app
 
-COPY go.sum ./app
-COPY go.mod  ./app
+COPY go.sum ./
+COPY go.mod  ./
 
 RUN go mod download
 
-COPY main.go ./app
+COPY main.go ./
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-SecondRest
 

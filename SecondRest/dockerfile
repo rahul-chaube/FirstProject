@@ -13,4 +13,4 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-SecondRest
 
 EXPOSE 9003
 
-CMD [ "./docker-SecondRest" ]
+CMD [ "/docker-SecondRest" ]

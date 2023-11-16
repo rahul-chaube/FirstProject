@@ -13,5 +13,5 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-feedback
 
 EXPOSE 9004
 
-VOLUME [ "/app/feedback_dir" ]
+# VOLUME [ "/app/feedback_dir" ]
 CMD [ "/docker-feedback" ]

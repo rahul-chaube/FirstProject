@@ -4,5 +4,6 @@ use (
 	./FirstRest
 	./SecondRest
 	./SimpleApp
+	./communication
 	./feedback
 )

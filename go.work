@@ -6,4 +6,5 @@ use (
 	./SimpleApp
 	./communication
 	./feedback
+	./networking
 )

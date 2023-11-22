@@ -37,7 +37,7 @@ func init() {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
 	defer cancel()
 	var err error
-	client, err = mongo.Connect(ctx, options.Client().ApplyURI("mongodb://172.17.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.2").SetConnectTimeout(30*time.Second))
+	client, err = mongo.Connect(ctx, options.Client().ApplyURI("mongodb://mongodb:27017").SetConnectTimeout(30*time.Second))
 
 	if err != nil {
 		panic(err)
